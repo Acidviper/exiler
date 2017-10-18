@@ -87,6 +87,7 @@
             "CUP_optic_ELCAN_SpecterDR",
             "CUP_optic_LeupoldMk4_MRT_tan",
             "CUP_optic_SB_11_4x20_PM",
+			"CUP_optic_SB_3_12x50_PMII",
             "CUP_optic_ZDDot",
             "CUP_optic_MRad",
             "CUP_optic_TrijiconRx01_desert",
@@ -452,7 +453,7 @@
             "CUP_srifle_DMR",
             //"CUP_srifle_DMR_LeupoldMk4",
             "CUP_srifle_CZ550",
-            //"CUP_srifle_LeeEnfield",
+            "CUP_srifle_LeeEnfield",
             "CUP_srifle_M14",
             /* "CUP_srifle_M15_Aim", */
             "CUP_srifle_Mk12SPR",

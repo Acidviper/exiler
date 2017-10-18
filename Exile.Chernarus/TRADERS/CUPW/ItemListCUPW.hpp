@@ -335,6 +335,7 @@
 	class CUP_optic_ELCAN_SpecterDR							{ quality = 3; price = 300; };
 	class CUP_optic_LeupoldMk4_MRT_tan						{ quality = 3; price = 300; };
 	class CUP_optic_SB_11_4x20_PM							{ quality = 3; price = 300; };
+	class CUP_optic_SB_3_12x50_PMII							{ quality = 3; price = 300; };
 	class CUP_optic_ZDDot									{ quality = 3; price = 300; };
 	class CUP_optic_MRad									{ quality = 3; price = 300; };
 	class CUP_optic_TrijiconRx01_desert						{ quality = 3; price = 300; };

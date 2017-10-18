@@ -10,5 +10,6 @@ waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUI
 firstCheck = 0; 
 execVM "addons\modChecker\init\modCheckerInit.sqf";
 //end modChecker
+ExileClientXM8IsPowerOn = true;
 call compileFinal preprocessFileLineNumbers "basedue.sqf";
 call compileFinal preprocessFileLineNumbers "flagstolen.sqf";

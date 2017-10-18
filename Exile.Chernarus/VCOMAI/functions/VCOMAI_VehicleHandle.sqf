@@ -9,28 +9,34 @@ private _UnitGroup = group _Driver;
 private _Vehicle = (vehicle _Driver);
 
 	private _CargoCount = 0;
-	{private _index = _Vehicle getCargoIndex _x;if !(_index isEqualTo -1) then {_CargoCount = _CargoCount + 1;};} foreach crew _vehicle;
-	if ((_myNearestEnemy distance _Driver) < 600 && {_CargoCount > 0}) then 
+	private _CargoList = [];
+	{if (((assignedVehicleRole _x) select 0) isEqualTo "cargo") then {_CargoCount = _CargoCount + 1;_CargoList pushback _x;};} foreach crew _vehicle;
+	
+	if (_CargoCount > 0) then 
 	{
-			if ((getPos _Vehicle select 2) < 3) then 
+			if ((getPos _Vehicle select 2) < 3 && {(_myNearestEnemy distance _Driver) < 600}) then 
 			{
 				_Driver disableAI "AUTOTARGET";
 				_Driver disableAI "TARGET";
 				_Driver disableAI "SUPPRESSION";
 				_Driver disableAI "COVER";
-				_Driver disableAI "AUTOCOMBAT";
 				_Vehicle land "GET OUT";
-				_Vehicle land "GET OUT";
+				_Driver land "GET OUT";
 				waitUntil {(speed _Vehicle) < 6;};
+				_Driver forcespeed 0; _Driver spawn {sleep 8;_this forceSpeed -1;};
 				{
-					private _index = _Vehicle getCargoIndex _x;
-					if !(_index isEqualTo -1) then {moveOut _x;doGetOut _x;_x leaveVehicle _Vehicle;unassignVehicle _x;};
+					moveOut _x;
+					doGetOut _x;
+					//_x leaveVehicle _Vehicle;
+					unassignVehicle _x;
+					[_CargoList] allowGetIn false;
+					_x spawn {[_this] allowGetIn false;sleep 120;[_this] allowGetIn true};
 					sleep 1;
-					[_x,false,false,false,false] spawn VCOMAI_MoveToCover;
+					//[_x,false,false,false,false] spawn VCOMAI_MoveToCover;
 					if (VCOM_AIDEBUG isEqualTo 1) then
 					{
 						[_x,"Disembark! Scatter!",30,20000] remoteExec ["3DText",0];
-					};					
+					};							
 					if ((leader _x) isEqualTo _x) then 
 					{
 							_waypoint2 = (group _x) addwaypoint[_myNearestEnemy,15,150];
@@ -38,29 +44,34 @@ private _Vehicle = (vehicle _Driver);
 							_waypoint2 setWaypointSpeed "NORMAL";
 							_waypoint2 setWaypointBehaviour "AWARE";
 					};							
-				} foreach crew _Vehicle;				
+				} foreach _CargoList;			
 				_Driver enableAI "AUTOTARGET";
 				_Driver enableAI "TARGET";
 				_Driver enableAI "SUPPRESSION";
 				_Driver enableAI "COVER";
-				_Driver enableAI "AUTOCOMBAT";
 			}
 			else
 			{
+				if ((_myNearestEnemy distance _Driver) < 700) then
+				{
 				_Driver disableAI "AUTOTARGET";
 				_Driver disableAI "TARGET";
 				_Driver disableAI "SUPPRESSION";
 				_Driver disableAI "COVER";
-				_Driver disableAI "AUTOCOMBAT";		
 				_Vehicle land "GET OUT";
-				_Vehicle land "GET OUT";
+				_Driver land "GET OUT";
 				waitUntil {(getPos _Vehicle select 2) < 2.5;};
 				waitUntil {(speed _Vehicle) < 6;};
+				_Driver forcespeed 0; _Driver spawn {sleep 8;_this forceSpeed -1;};
 				{
-					private _index = _Vehicle getCargoIndex _x;
-					if !(_index isEqualTo -1) then {moveOut _x;doGetOut _x;_x leaveVehicle _Vehicle;unassignVehicle _x;};
+					moveOut _x;
+					doGetOut _x;
+					//_x leaveVehicle _Vehicle;
+					unassignVehicle _x;
+					[_CargoList] allowGetIn false;
+					_x spawn {[_this] allowGetIn false;sleep 120;[_this] allowGetIn true};
 					sleep 1;
-					[_x,false,false,false,false] spawn VCOMAI_MoveToCover;
+					//[_x,false,false,false,false] spawn VCOMAI_MoveToCover;
 					if (VCOM_AIDEBUG isEqualTo 1) then
 					{
 						[_x,"Disembark! Scatter!",30,20000] remoteExec ["3DText",0];
@@ -72,13 +83,12 @@ private _Vehicle = (vehicle _Driver);
 							_waypoint2 setWaypointSpeed "NORMAL";
 							_waypoint2 setWaypointBehaviour "AWARE";
 					};							
-				} foreach crew _Vehicle;						
+				} foreach _CargoList;						
 				_Driver enableAI "AUTOTARGET";
 				_Driver enableAI "TARGET";
 				_Driver enableAI "SUPPRESSION";
 				_Driver enableAI "COVER";
-				_Driver enableAI "AUTOCOMBAT";	
-		
+				};
 			};
 	};
 

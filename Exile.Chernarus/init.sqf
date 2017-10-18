@@ -13,10 +13,9 @@ call compileFinal preprocessFileLineNumbers "time.sqf";
 call compileFinal preprocessFileLineNumbers "VirtualGarage\VirtualGarage_Client_Init.sqf";
 execVM "Build_Limits\config.sqf";
 if(hasInterface)then
-	{
-		call compileFinal preprocessFileLineNumbers "addons\paintshop\paintshop.sqf";
-	};
-ExileClientXM8IsPowerOn = true;
+{
+[] execVM "addons\paintshop\paintshop.sqf";
+};
 SA_TOW_LOCKED_VEHICLES_ENABLED = false;
 SA_TOW_IN_EXILE_SAFEZONE_ENABLED = false;
 SA_MAX_TOWED_CARGO = 2;

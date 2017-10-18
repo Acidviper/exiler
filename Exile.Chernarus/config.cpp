@@ -2235,8 +2235,6 @@ class CfgExileCustomCode
 	ExileServer_util_getFragType = "fixes\ExileServer_util_getFragType.sqf";
 	ExileServer_util_getFragKiller = "fixes\ExileServer_util_getFragKiller.sqf";
 	
-	//Paintshop
-	ExileServer_object_construction_database_load = "addons\paintshop\ExileServer_object_construction_database_load.sqf";
 	#include "CfgExileCustomCode.cpp"
 	
 	//infistar array fix
@@ -2256,6 +2254,13 @@ class CfgExileCustomCode
 	
 	//improved kill feed
 	ExileServer_object_player_event_onMpKilled = "Custom\ImprovedKillFeed\ExileServer_object_player_event_onMpKilled.sqf";
+	
+	//annoying pin change contact admin shit
+	ExileClient_gui_vehicleRekeyDialog_network_resetCodeDialogResponse = "ExileClient_gui_vehicleRekeyDialog_network_resetCodeDialogResponse.sqf";
+	ExileClient_gui_vehicleRekeyDialog_network_rekeyVehicleDialogResponse = "ExileClient_gui_vehicleRekeyDialog_network_rekeyVehicleDialogResponse.sqf";
+	
+	//safezone time
+	//ExileClient_object_player_safezone_checkSafezone = "ExileClient_object_player_safezone_checkSafezone.sqf";
 };
 class CfgExileEnvironment
 {
@@ -2645,6 +2650,13 @@ class CfgInteractionMenus
                 condition = "(!(alive (ExileClientInteractionObject)))";
                 action = "_this call NR_fnc_SalvageVehicle";
             };
+			
+			class Paint: ExileAbstractAction
+			{
+				title = "Paint";
+				condition = "(((ExileClientInteractionObject getVariable ['ExileAlreadyKnownCode','']) != '') && ((locked ExileClientInteractionObject) == 0) && ((locked ExileClientInteractionObject) != 1) || ((local ExileClientInteractionObject) && (locked ExileClientInteractionObject) == 1))";
+				action = "_this spawn SM_Paint_Show";
+			};
 		};
     };
 	class Car 
@@ -2727,6 +2739,13 @@ class CfgInteractionMenus
                 condition = "(!(alive (ExileClientInteractionObject)))";
                 action = "_this call NR_fnc_SalvageVehicle";
             };
+			
+			class Paint: ExileAbstractAction
+			{
+				title = "Paint";
+				condition = "(((ExileClientInteractionObject getVariable ['ExileAlreadyKnownCode','']) != '') && ((locked ExileClientInteractionObject) == 0) && ((locked ExileClientInteractionObject) != 1) || ((local ExileClientInteractionObject) && (locked ExileClientInteractionObject) == 1))";
+				action = "_this spawn SM_Paint_Show";
+			};
 		};
 	};
 
@@ -2824,6 +2843,13 @@ class CfgInteractionMenus
                 condition = "(!(alive (ExileClientInteractionObject)))";
                 action = "_this call NR_fnc_SalvageVehicle";
             };
+			
+			class Paint: ExileAbstractAction
+			{
+				title = "Paint";
+				condition = "(((ExileClientInteractionObject getVariable ['ExileAlreadyKnownCode','']) != '') && ((locked ExileClientInteractionObject) == 0) && ((locked ExileClientInteractionObject) != 1) || ((local ExileClientInteractionObject) && (locked ExileClientInteractionObject) == 1))";
+				action = "_this spawn SM_Paint_Show";
+			};
 		};
 	};
 
@@ -3008,6 +3034,13 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject animationSourcePhase 'DrawBridge_Source') < 0.5)";
 				action = "ExileClientInteractionObject animateSource ['DrawBridge_Source', 2]";
 			};
+			
+			class Paint: ExileAbstractAction
+			{
+				title = "Paint";
+				condition = "call ExileClient_util_world_isInOwnTerritory";
+				action = "_this spawn SM_Paint_Show";
+			};
 		};
 	};
 
@@ -3098,13 +3131,13 @@ class CfgInteractionMenus
 				condition = "(!((ExileClientInteractionObject getVariable ['ExileConstructionDamage',0]) isEqualTo 0)) && (call ExileClient_util_world_isInOwnTerritory)";
 				action = "_this call ExileClient_object_construction_repair";
 			};
-			
-			class Paint : ExileAbstractAction
+
+			class Paint: ExileAbstractAction
 			{
-				title = "Paint Base Part";
+				title = "Paint";
 				condition = "call ExileClient_util_world_isInOwnTerritory";
-				action = "ExileClientInteractionObject call HALV_paintshop_opendialog";
-			};
+				action = "_this spawn SM_Paint_Show";
+			};			
 		};
 	};
 
@@ -3234,6 +3267,13 @@ class CfgInteractionMenus
 				condition = "((crew ExileClientInteractionObject) isEqualTo [])";
 				action = "_this call ExileClient_object_vehicle_push";
 			};
+			
+			class Paint: ExileAbstractAction
+			{
+				title = "Paint";
+				condition = "(((ExileClientInteractionObject getVariable ['ExileAlreadyKnownCode','']) != '') && ((locked ExileClientInteractionObject) == 0) && ((locked ExileClientInteractionObject) != 1) || ((local ExileClientInteractionObject) && (locked ExileClientInteractionObject) == 1))";
+				action = "_this spawn SM_Paint_Show";
+			};
 		};
 	};
 
@@ -3249,8 +3289,14 @@ class CfgInteractionMenus
 				title = "Flip";
 				condition = "true";
 				action = "_this call ExileClient_object_vehicle_flip";
-			};		
+			};	
 
+			class Paint: ExileAbstractAction
+			{
+				title = "Paint";
+				condition = "(((ExileClientInteractionObject getVariable ['ExileAlreadyKnownCode','']) != '') && ((locked ExileClientInteractionObject) == 0) && ((locked ExileClientInteractionObject) != 1) || ((local ExileClientInteractionObject) && (locked ExileClientInteractionObject) == 1))";
+				action = "_this spawn SM_Paint_Show";
+			};
 		};
 	};
 
@@ -4938,6 +4984,12 @@ class CfgNetworkMessages {
 		module = "VirtualGarage";
 		parameters[] = {"STRING"};
 	};
+	
+	class updatePaint
+    {
+        module = "paint";
+        parameters[] = {"STRING","SCALAR","ARRAY"};
+    };
 /////////////////////
 //Anti-Theft 2.0
 /////////////////////
@@ -4965,14 +5017,6 @@ class CfgNetworkMessages {
     {
         module = "AntiTheft";
         parameters[] = {"OBJECT","OBJECT"};
-    };
-/////////////////
-//Base Paint
-/////////////////
-    class saveBasePartPaintRequest
-    {
-        module = "saveBasePartPaintRequest";
-        parameters[] = {"STRING","OBJECT"};
     };
 };
 

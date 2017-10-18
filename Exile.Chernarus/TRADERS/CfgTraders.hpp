@@ -252,11 +252,12 @@
 
 	class Exile_Trader_CommunityCustoms4
 	{
-		name = "COMMUNITY";
+		name = "Military Vehicles";
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"Community4"
+			"MilitaryVehicles",
+			"MilitaryHelis"
 		};
 	};
 

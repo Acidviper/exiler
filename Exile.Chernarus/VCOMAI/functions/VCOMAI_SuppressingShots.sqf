@@ -51,7 +51,6 @@ if (VCOM_CurrentlySuppressing < VCOM_CurrentlySuppressingLimit) then
 				_Kn = _unit knowsAbout _x;
 				if (_CheckDistance < 4 && (_Kn > 3.5)) then 
 				{
-					_x setSuppression 1;
 					if (VCOM_Suppression) then
 					{
 						if (isPlayer _x) then {remoteExec ["PSup",_x];}

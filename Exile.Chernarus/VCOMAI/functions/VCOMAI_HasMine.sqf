@@ -4,6 +4,7 @@
 
 private _VCOM_HasMine = false;
 private _magazinesAmmo = magazinesAmmo _this;
+if (isNil "_magazinesAmmo") exitWith {_PushArray = [false,[],false,[]];_PushArray};
 private _VCOM_HASSATCHEL = false;
 private _ActualObj = [];
 private _SatchelArray = [];

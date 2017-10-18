@@ -12,8 +12,8 @@ if (isPlayer _Unit) exitWith {};
 if ((vehicle _Unit) != _Unit) exitWith {};
 
 //Lay down
-_Unit setUnitPos "MIDDLE";_Unit spawn {sleep 30; _this setUnitPos "AUTO";};
-[_Unit,false,false,false,false] spawn VCOMAI_MoveToCover;
+_Unit setUnitPos "DOWN";_Unit spawn {sleep 30; _this setUnitPos "MIDDLE";sleep 30;_this setUnitPos "AUTO";};
+//[_Unit,false,false,false,false] spawn VCOMAI_MoveToCover;
 if (VCOM_AIDEBUG isEqualTo 1) then
 {
 	[_Unit,"I am hit!",30,20000] remoteExec ["3DText",0];

@@ -6,6 +6,10 @@
 		{
 			"CUP_C_Golf4_black_Civ",
 			"CUP_C_Golf4_camo_Civ",
+			"CUP_C_S1203_CIV",
+			"CUP_C_S1203_Ambulance_CIV",
+			"CUP_B_S1203_Ambulance_CDF",
+			"CUP_C_S1203_Militia_CIV",
 			//"CUP_C_Datsun",
 			//"CUP_C_Datsun_4seat",
 			//"CUP_C_Datsun_Plain",

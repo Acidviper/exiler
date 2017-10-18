@@ -47,21 +47,23 @@ VCOM_Adrenaline = false;
 //How much of a speed boost should players/AI recieve? Default = 1.35; (1 is ArmA's normal speed).
 VCOM_AdrenalineVar = 1.35;
 //How many AI UNITS can be calculating cover positions at once?
-VCOM_CurrentlyMovingLimit = 50;
+VCOM_CurrentlyMovingLimit = 15;
 //How many AI UNITS can be suppressing others at once?
 VCOM_CurrentlySuppressingLimit = 20;
 //The distance a unit needs to be away for Vcom AI to temporary disable itself upon the unit? The AI unit will also need to be out of combat.
 VCOM_DisableDistance = 1600;
 //How many AI can be checking roles/equipment/additional commands at once? This will impact FPS of AI in and out of battle. The goal is to limit how many benign commands are being run at once and bogging down a server with over a couple HUNDRED AI.
-VCOM_BasicCheckLimit = 50;
+VCOM_BasicCheckLimit = 25;
 //How many squad leaders can be executing advanced code at once.
-VCOM_LeaderExecuteLimit = 50;
+VCOM_LeaderExecuteLimit = 15;
 //How low should the FPS be, before Vcom pauses simulation. This will not disable simulation on AI - they will run default Bohemia AI.
 VCOM_FPSFreeze = 6;
 //Should the AI consider stealing/using empty ground vehicles?
 VCOM_VehicleUse = false;
 //Should the AI notice IR lasers?
 VCOM_IRLaser = true;
+//The distance, in meters, of how far AI will look for empty unlocked vehicles to steal.
+VCOM_AIDISTANCEVEHPATH = 200;
 
 //The longer an AI's target stays in 1 location, the more accurate and aware of the target the AI becomes.DEFAULT = [WEST,EAST,CIVILIAN,RESISTANCE];
 VCOM_IncreasingAccuracy = true;

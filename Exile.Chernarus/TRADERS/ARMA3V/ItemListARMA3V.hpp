@@ -10,19 +10,19 @@
 	class B_G_Offroad_01_repair_F  						{ quality = 3; price = 35000; };
 	class B_G_Quadbike_01_F								{ quality = 1; price = 500; };
 	//class B_MRAP_01_F 									{ quality = 3; price = 50000; };
-	class B_MRAP_01_gmg_F                               { quality = 3; price = 50000; };
-	class B_MRAP_01_hmg_F                               { quality = 3; price = 75000; sellPrice = 25000; };
+	class B_MRAP_01_gmg_F                               { quality = 3; price = 85000; sellPrice = 25000; };
+	class B_MRAP_01_hmg_F                               { quality = 3; price = 80000; sellPrice = 25000; };
 	class B_Quadbike_01_F 								{ quality = 1; price = 500; };
 	class O_G_Quadbike_01_F 							{ quality = 1; price = 500; };
 	//class O_MRAP_02_F  									{ quality = 3; price = 50000; };
-	class O_MRAP_02_gmg_F                               { quality = 3; price = 50000; };
-	class O_MRAP_02_hmg_F                               { quality = 3; price = 75000; sellPrice = 25000; };
+	class O_MRAP_02_gmg_F                               { quality = 3; price = 85000; sellPrice = 25000; };
+	class O_MRAP_02_hmg_F                               { quality = 3; price = 80000; sellPrice = 25000; };
 	class O_Quadbike_01_F 								{ quality = 1; price = 500; };
 	class I_Quadbike_01_F 								{ quality = 1; price = 500; };
 	class I_G_Quadbike_01_F 							{ quality = 1; price = 500; };
 	//class I_MRAP_03_F  									{ quality = 3; price = 50000; };
-	class I_MRAP_03_hmg_F                               { quality = 3; price = 75000; sellPrice = 25000; };
-	class I_MRAP_03_gmg_F                               { quality = 3; price = 50000; };
+	class I_MRAP_03_hmg_F                               { quality = 3; price = 80000; sellPrice = 25000; };
+	class I_MRAP_03_gmg_F                               { quality = 3; price = 85000; sellPrice = 25000; };
 	class O_T_MRAP_02_hmg_ghex_F						{ quality = 3; price = 55000; };
     class O_T_MRAP_02_gmg_ghex_F						{ quality = 3; price = 60000; };
 
@@ -77,7 +77,7 @@
 	///////////////////////////////////////////////////////////////////////////////
 	class B_APC_Tracked_01_rcws_F                       { quality = 3; price = 59750; };
 	class B_APC_Tracked_01_CRV_F                        { quality = 3; price = 80000; };
-	class B_T_APC_Tracked_01_CRV_F						{ quality = 3; price = 120000; sellPrice = 40000; };
+	class B_T_APC_Tracked_01_CRV_F						{ quality = 3; price = 220000; sellPrice = 40000; };
 	class B_APC_Tracked_01_AA_F 						{ quality = 3; price = 80000; };
 	class B_MBT_01_arty_F 								{ quality = 1; price = 1000000; };
 	class B_MBT_01_mlrs_F 								{ quality = 1; price = 1000000; };
@@ -87,7 +87,7 @@
 	class O_APC_Tracked_02_AA_F                         { quality = 3; price = 80000; };
 	class O_MBT_02_cannon_F 							{ quality = 1; price = 1000000; };
 	class O_MBT_02_arty_F  								{ quality = 1; price = 1000000; };
-	class O_APC_Wheeled_02_rcws_F                       { quality = 3; price = 50000; };
+	class O_APC_Wheeled_02_rcws_F                       { quality = 3; price = 180000;  sellPrice = 45000; };
 	class I_APC_tracked_03_cannon_F 					{ quality = 1; price = 1000000; };
 	class I_MBT_03_cannon_F  							{ quality = 1; price = 1000000; };
 	class I_APC_Wheeled_03_cannon_F 					{ quality = 1; price = 400000; };
@@ -169,7 +169,7 @@
 	class B_Heli_Transport_01_camo_F                    { quality = 3; price = 60000; sellPrice = 50000; };
 	class B_Heli_Transport_03_F                         { quality = 3; price = 60000; };
 	class B_Heli_Transport_03_black_F					{ quality = 1; price = 60000; }
-	class O_Heli_Light_02_F                             { quality = 3; price = 150000; sellPrice = 50000; };
+	class O_Heli_Light_02_F                             { quality = 3; price = 180000; sellPrice = 50000; };
 	class O_Heli_Light_02_unarmed_F 					{ quality = 1; price = 25000; }
 	class O_Heli_Light_02_v2_F							{ quality = 1; price = 110000; }
 	class O_Heli_Attack_02_F 							{ quality = 1; price = 160000; }

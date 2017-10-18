@@ -58,9 +58,7 @@
 			"Exile_Item_WoodWallHalfKit",
 			"Exile_Item_WoodWallKit",
 			"Exile_Item_WoodWindowKit",
-			"Exile_Item_WaterCanisterEmpty"
-			
-        
+			"Exile_Item_WaterCanisterEmpty"        
         };
     };
 	
@@ -224,5 +222,94 @@
             "CUP_B_DShkM_TripodHigh_Bag",
 			"O_HMG_01_support_high_F",
 			"O_HMG_01_high_weapon_F"
+		};
+	};
+	
+	class MilitaryVehicles
+	{
+		name = "Military Vehicles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"CUP_B_M7Bradley_USA_D",
+			"O_APC_Wheeled_02_rcws_F",
+			"CUP_I_ZSU23_AAF",
+			"CUP_B_M1126_ICV_M2_Woodland",
+			"CUP_O_BTR60_SLA",
+			"CUP_B_HMMWV_DSHKM_GPK_ACR",
+			"CUP_B_HMMWV_AGS_GPK_ACR",
+			"CUP_B_RG31_Mk19_OD_USMC",
+			"CUP_B_RG31_M2_OD_USMC",
+			"CUP_O_BTR60_TK",
+			"CUP_O_BMP2_ZU_TKA",
+			"CUP_O_Ural_ZU23_TKM",
+			"CUP_B_HMMWV_M2_GPK_USA",
+			"CUP_B_FV432_Bulldog_GB_W_RWS",
+			"CUP_O_BRDM2_RUS",
+			"CUP_O_GAZ_Vodnik_PK_RU",
+			"CUP_O_GAZ_Vodnik_BPPU_RU",
+			"O_T_LSV_02_armed_F",
+			"CUP_B_Mastiff_HMG_GB_W",
+			"CUP_B_Mastiff_GMG_GB_W",
+			"CUP_B_Ridgback_HMG_GB_W",
+			"CUP_B_Ridgback_GMG_GB_W",
+			"CUP_B_Wolfhound_HMG_GB_W",
+			"CUP_B_Wolfhound_GMG_GB_W",
+			"B_T_APC_Tracked_01_CRV_F",
+			"CUP_I_M163_RACS",
+			"CUP_B_HMMWV_TOW_USA",
+			"CUP_B_HMMWV_Avenger_USA",
+			"CUP_B_BRDM2_ATGM_CDF",
+			"CUP_I_T34_NAPA",
+			"CUP_B_T810_Reammo_CZ_WDL",
+			"B_Truck_01_ammo_F",
+			"O_Truck_02_Ammo_F",
+			"I_Truck_02_ammo_F",
+			"O_Truck_03_ammo_F",
+			"CUP_O_Ural_Reammo_RU",
+			"CUP_B_MTVR_Ammo_USMC",
+			"CUP_B_AAV_USMC",
+			"CUP_B_FV432_Bulldog_GB_W",
+			"CUP_B_M1130_CV_M2_Woodland",
+			"CUP_B_MCV80_GB_W",
+			"CUP_B_BTR60_CDF",
+			"CUP_I_BRDM2_TK_Gue",
+			"CUP_I_M113_RACS",
+			"CUP_B_LAV25_USMC",
+			"I_MRAP_03_hmg_F",
+			"B_MRAP_01_hmg_F",
+			"O_MRAP_02_hmg_F",
+			"B_MRAP_01_gmg_F",
+			"O_MRAP_02_gmg_F",
+			"I_MRAP_03_gmg_F",
+			"CUP_B_Dingo_GER_Des",
+			"CUP_B_Dingo_GER_Wdl",
+			"CUP_B_Dingo_CZ_Wdl",
+			"CUP_B_Dingo_GL_CZ_Wdl",
+			"CUP_B_Dingo_GL_GER_Wdl",
+			"CUP_B_HMMWV_M2_GPK_NATO_T",
+			"CUP_B_Jackal2_L2A1_GB_W",
+			"CUP_I_SUV_Armored_ION",
+			"CUP_B_HMMWV_M1114_USMC",
+			"CUP_B_HMMWV_MK19_NATO_T",
+			"CUP_B_T810_Armed_CZ_WDL",
+			"CUP_B_BAF_Coyote_L2A1_W",
+			"CUP_B_Dingo_GER_Wdl",
+			"HMMWV_M134",
+			"CUP_B_M60A3_USMC"
+		};
+	};
+	
+	class MilitaryHelis
+	{
+		name = "Military Helis";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"B_Heli_Transport_01_camo_F",
+			"CUP_B_UH60L_US",
+			"O_Heli_Light_02_F",
+			"CUP_B_AH6M_Cannons_USA",
+			"CUP_B_AH6M_AT_GAU_USA"
 		};
 	};

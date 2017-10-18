@@ -3,6 +3,10 @@
 	///////////////////////////////////////////////////////////////////////////////
 	//CUP Unarmed
 	///////////////////////////////////////////////////////////////////////////////
+	class CUP_C_S1203_CIV					{ quality = 1; price = 1500; };
+	class CUP_C_S1203_Ambulance_CIV			{ quality = 1; price = 1500; };
+	class CUP_B_S1203_Ambulance_CDF			{ quality = 1; price = 1500; };
+	class CUP_C_S1203_Militia_CIV			{ quality = 1; price = 1500; };
 	class CUP_C_Golf4_black_Civ             { quality = 1; price = 2000; };
 	class CUP_C_Golf4_camo_Civ              { quality = 1; price = 4000; };
 	class CUP_C_Datsun	                    { quality = 1; price = 4000; };
@@ -103,7 +107,7 @@
 	class CUP_O_UAZ_AGS30_RU	            { quality = 1; price = 26500; };
 	class CUP_O_UAZ_AGS30_TKA	            { quality = 1; price = 26500; };
 	class CUP_I_UAZ_AGS30_UN	            { quality = 1; price = 26500; };
-	class CUP_I_M113_RACS		            { quality = 1; price = 70000; };
+	class CUP_I_M113_RACS		            { quality = 1; price = 130000; sellPrice = 35000; };
 	class CUP_I_M113_UN			            { quality = 1; price = 35500; };
 	class CUP_B_BRDM2_HQ_CDF	            { quality = 1; price = 35000; };
 	class CUP_O_BRDM2_HQ_SLA	            { quality = 1; price = 35000; };
@@ -141,25 +145,27 @@
 	class CUP_B_HMMWV_Crows_MK19_USA	    { quality = 1; price = 35500; };
 	class CUP_B_HMMWV_SOV_USA	            { quality = 1; price = 35500; };
 	class CUP_B_HMMWV_MK19_NATO_T			{ quality = 1; price = 35500; };
-	class CUP_B_FV432_Bulldog_GB_W_RWS      { quality = 3; price = 70000; };
+	class CUP_B_FV432_Bulldog_GB_W_RWS      { quality = 3; price = 150000; sellPrice = 35000; };
 	class CUP_B_Dingo_GER_Wdl 				{ quality = 3; price = 75000; };
 	class CUP_B_Wolfhound_LMG_GB_W          { quality = 3; price = 80000; };
 	class CUP_B_Ridgback_LMG_GB_W           { quality = 3; price = 80000; };
 	class CUP_B_Mastiff_LMG_GB_W            { quality = 3; price = 80000; };
     class CUP_I_SUV_Armored_ION				{ quality = 3; price = 45000; };
-	class CUP_O_BTR90_RU					{ quality = 3; price = 1000000; };
+	class CUP_O_BTR90_RU					{ quality = 3; price = 180000; };
 	class CUP_B_LAV25M240_USMC				{ quality = 3; price = 40000; };
 	class CUP_B_LAV25_HQ_USMC				{ quality = 3; price = 63000; };
-	class CUP_B_LAV25_USMC					{ quality = 3; price = 80000; };
+	class CUP_B_LAV25_USMC					{ quality = 3; price = 200000; sellPrice = 40000; };
 	class CUP_O_BTR90_HQ_RU					{ quality = 3; price = 43000; };
 	class CUP_O_GAZ_Vodnik_PK_RU			{ quality = 1; price = 45000; };
-	class CUP_O_GAZ_Vodnik_BPPU_RU			{ quality = 1; price = 85000; };
+	class CUP_O_GAZ_Vodnik_BPPU_RU			{ quality = 1; price = 150000; sellPrice = 42500; };
 	class CUP_B_BAF_Coyote_L2A1_W			{ quality = 1; price = 35000; };
 	class CUP_B_BAF_Coyote_L2A1_D			{ quality = 1; price = 35000; };
-	class CUP_I_M163_RACS					{ quality = 3; price = 150000; };
-	class CUP_B_HMMWV_TOW_USA				{ quality = 3; price = 80000; };
-	class CUP_B_HMMWV_Avenger_USA			{ quality = 3; price = 80000; };
-	class CUP_B_BRDM2_ATGM_CDF				{ quality = 3; price = 80000; };
+	class CUP_I_M163_RACS					{ quality = 3; price = 220000; sellPrice = 55000; };
+	class CUP_B_HMMWV_TOW_USA				{ quality = 3; price = 200000; sellPrice = 40000; };
+	class CUP_B_HMMWV_Avenger_USA			{ quality = 3; price = 220000; sellPrice = 40000; };
+	class CUP_B_BRDM2_ATGM_CDF				{ quality = 3; price = 200000; sellPrice = 40000; };
+	class CUP_B_M7Bradley_USA_D				{ quality = 3; price = 180000; sellPrice = 45000; };
+	class CUP_I_ZSU23_AAF					{ quality = 3; price = 220000; sellPrice = 50000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	//CUP Helis

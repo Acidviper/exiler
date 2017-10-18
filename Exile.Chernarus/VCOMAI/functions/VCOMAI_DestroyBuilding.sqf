@@ -42,7 +42,6 @@ if ((_Unit distance _Point) < 200) then
 			private _PlantPosition = getpos _mine;
 			private _NotSafe = true;
 			private _UnitSide = (side _Unit);
-			doStop _Unit;
 			_Unit doMove (getpos (leader _Group));
 			_Unit enableAI "TARGET";
 			_Unit enableAI "AUTOTARGET";

@@ -4,6 +4,7 @@ if (isNil "VCOM_AllSettings") then
 {
 	VCOM_AllSettings = 
 	[
+	["VCOM_AIINGAMEMENU",VCOM_AIINGAMEMENU,"Enable or disable the INGAME setting menu. This is off by default due to compatability issues with multiple mods and scripts."],
 	["VCOM_AISkillEnabled",VCOM_AISkillEnabled,"Variable for enabling/disabling skill changes for AI. True is on, False is off."],
 	["VCOM_AIConfig",VCOM_AIConfig,"Variable for finding out which config was loaded."],
 	["VCOM_AIDEBUG",VCOM_AIDEBUG,"Turn this on to see certain debug messages. 1 is on. 0 is off."],
@@ -41,16 +42,19 @@ if (isNil "VCOM_AllSettings") then
 	["VCOM_Unit_AIWarnDistance",VCOM_Unit_AIWarnDistance,"Distance AI will respond to call of help from each other"],
 	["VCOM_WaypointDistance",VCOM_WaypointDistance,"Distance the AI will attempt to flank around the enemy. I.E. How far off a waypoint, or around the enemy squad, the AI are willing to go in combat."],
 	["VCOM_SIDESPECIFIC",VCOM_SIDESPECIFIC,"Switching this to true will enable side specific skill settings. Side specific skills get added IN ADDITION TO the normal ranked skill."],
-	["VCOM_CLASSNAMESPECIFIC",VCOM_CLASSNAMESPECIFIC,"Switching this to true will enable classname specific skill settings. VCOM_SIDESPECIFIC and VCOM_CLASSNAMESPECIFIC can both be true, however any units in the VCOM_CLASSNAMESPECIFIC array are given priority over everything else."]
+	["VCOM_CLASSNAMESPECIFIC",VCOM_CLASSNAMESPECIFIC,"Switching this to true will enable classname specific skill settings. VCOM_SIDESPECIFIC and VCOM_CLASSNAMESPECIFIC can both be true, however any units in the VCOM_CLASSNAMESPECIFIC array are given priority over everything else."],
+	["VCOM_AIDISTANCEVEHPATH",VCOM_AIDISTANCEVEHPATH,"The distance, in meters, of how far AI will look for empty unlocked vehicles to steal."]
 	];
 };
 
 if (isDedicated) exitWith {};
 _Create = false;
-
+/*
 while {true} do
 {
 		
+		if (VCOM_AIINGAMEMENU) then
+		{
 		waitUntil {!(isNull (findDisplay 49))}; 
 		private _Admin = [] call BIS_fnc_admin;
 		if (isNull (FindDisplay 5230)) then
@@ -94,6 +98,7 @@ while {true} do
 		_Create = false;
 		closeDialog 5230;
 	sleep 0.2;
+	};
 };
 
 
@@ -101,4 +106,4 @@ while {true} do
 //(findDisplay 46) displayRemoveEventHandler ["KeyDown", VCOM_ESCPRESSED];
 
 
-
+*/

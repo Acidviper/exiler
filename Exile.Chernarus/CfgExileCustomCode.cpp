@@ -33,6 +33,8 @@ ExileServer_object_container_database_update = "Exile_Server_Overrides\ExileServ
 ExileServer_object_container_database_load = "Exile_Server_Overrides\ExileServer_object_container_database_load.sqf";
 ExileServer_object_container_database_insert = "Exile_Server_Overrides\ExileServer_object_container_database_insert.sqf";
 ExileServer_object_container_createContainer = "Exile_Server_Overrides\ExileServer_object_container_createContainer.sqf";
-//this was replaced with paintshop file in config.cpp
+//original
 //ExileServer_object_construction_database_load = "Exile_Server_Overrides\ExileServer_object_construction_database_load.sqf";
+//paintshop (file is in server addon)
+ExileServer_object_construction_database_load = "SM_Paint\overrides\ExileServer_object_construction_database_load.sqf";
 ExileServer_object_construction_database_insert = "Exile_Server_Overrides\ExileServer_object_construction_database_insert.sqf";

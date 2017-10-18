@@ -101,44 +101,44 @@
 	// Mission vehicles
 	///////////////////////////////////////////////////////////////////////////////
 	class CUP_O_T34_TKA										{ quality = 3; price = 100000; };
-	class CUP_I_T34_NAPA									{ quality = 3; price = 100000; };
+	class CUP_I_T34_NAPA									{ quality = 3; price = 200000; sellPrice = 50000; };
 	class B_T_APC_Tracked_01_AA_F                           { quality = 3; price = 80000; };
 	class O_APC_Tracked_02_AA_ghex_F                        { quality = 3; price = 80000; };
 	class CUP_B_T810_Armed_CZ_WDL							{ quality = 3; price = 45000; };
 	class B_T_LSV_01_armed_CTRG_F							{ quality = 3; price = 40000; };
 	class CUP_O_Ural_ZU23_TKM								{ quality = 3; price = 40000; };
-	class CUP_O_BTR60_TK									{ quality = 3; price = 70000; };
-	class CUP_O_BTR60_SLA									{ quality = 3; price = 70000; };
+	class CUP_O_BTR60_TK									{ quality = 3; price = 110000; sellPrice = 35000; };
+	class CUP_O_BTR60_SLA									{ quality = 3; price = 110000; sellPrice = 35000; };
 	class CUP_O_BTR60_UN									{ quality = 3; price = 70000; };
 	class CUP_O_BTR60_CDF									{ quality = 3; price = 70000; };
-	class CUP_B_BTR60_CDF									{ quality = 3; price = 70000; };
+	class CUP_B_BTR60_CDF									{ quality = 3; price = 110000; sellPrice = 35000; };
 	class CUP_I_AH1Z_Escort_AAF								{ quality = 3; price = 60000; };
-	class CUP_O_BMP2_ZU_TKA									{ quality = 3; price = 45000; };
-	class CUP_RG31_M2_OD									{ quality = 3; price = 40000; };
+	class CUP_O_BMP2_ZU_TKA									{ quality = 3; price = 100000; sellPrice = 25000; };
+	class CUP_RG31_M2_OD									{ quality = 3; price = 90000; sellPrice = 22500; };
 	class CUP_B_RG31_M2_USMC								{ quality = 3; price = 40000; };
-	class CUP_B_RG31_M2_OD_USMC								{ quality = 3; price = 40000; };
+	class CUP_B_RG31_M2_OD_USMC								{ quality = 3; price = 80000; sellPrice = 20000; };
 	class CUP_B_RG31_M2_GC_USMC								{ quality = 3; price = 40000; };
 	class CUP_B_RG31_Mk19_USMC								{ quality = 3; price = 40000; };
-	class CUP_B_RG31_Mk19_OD_USMC							{ quality = 3; price = 40000; };
-	class CUP_B_RG31_Mk19_OD								{ quality = 3; price = 40000; };
+	class CUP_B_RG31_Mk19_OD_USMC							{ quality = 3; price = 80000; sellPrice = 20000; };
 	class CUP_B_RG31E_M2_USMC								{ quality = 3; price = 40000; };
 	class CUP_B_AH6J_Escort19_USA							{ quality = 3; price = 40000; };
 	class CUP_B_Wildcat_Cannon_Armed_Green_AAF				{ quality = 3; price = 40000; };
 	class CUP_B_Wildcat_Cannon_Armed_Digital_AAF			{ quality = 3; price = 40000; };
 	class CUP_B_M163_USA									{ quality = 3; price = 40000; };
-	class CUP_B_AAV_USMC									{ quality = 3; price = 70000; };
+	class CUP_B_AAV_USMC									{ quality = 3; price = 175000; sellPrice = 35000; };
 	class CUP_B_T810_Reammo_CZ_WDL							{ quality = 3; price = 70000; };
 	class CUP_B_MTVR_Ammo_USMC 								{ quality = 3; price = 70000; };
 	class CUP_O_Ural_Reammo_RU 								{ quality = 3; price = 70000; };
 	class CUP_B_UH1Y_GUNSHIP_USMC                            { quality = 3; price = 69750; };
-	class CUP_B_AH6M_AT_GAU_USA                              { quality = 3; price = 150000; sellPrice = 50000; };
-	class CUP_B_AH6M_Cannons_USA                             { quality = 3; price = 150000; sellPrice = 50000; };
-	class CUP_B_MCV80_GB_W			                         { quality = 3; price = 80000; };
-	class CUP_B_M1126_ICV_M2_Woodland                        { quality = 3; price = 49750; };
+	class CUP_B_AH6M_AT_GAU_USA                              { quality = 3; price = 200000; sellPrice = 50000; };
+	class CUP_B_AH6M_Cannons_USA                             { quality = 3; price = 120000; sellPrice = 50000; };
+	class CUP_B_MCV80_GB_W			                         { quality = 3; price = 220000; sellPrice = 40000; };
+	class CUP_B_M1126_ICV_M2_Woodland                        { quality = 3; price = 130000; sellPrice = 49750; };
 	class CUP_B_M1126_ICV_MK19_Woodland                      { quality = 3; price = 49750; };
-	class CUP_B_M1130_CV_M2_Woodland                         { quality = 3; price = 70000; };
+	class CUP_B_M1130_CV_M2_Woodland                         { quality = 3; price = 190000; sellPrice = 35000; };
 	class CUP_B_M1130_CV_MK19_Woodland                       { quality = 3; price = 70000; };
-	class CUP_B_FV432_Bulldog_GB_W	                         { quality = 3; price = 70000; };
+	class CUP_B_FV432_Bulldog_GB_W	                         { quality = 3; price = 190000; sellPrice = 35000; };
+	class CUP_B_M60A3_USMC			                         { quality = 3; price = 220000; sellPrice = 55000; };
 
 	
     ///////////////////////////////////////////////////////////////////////////////
@@ -170,7 +170,7 @@
 	//Armed
 	class CUP_B_M113_USA                                    { quality = 3; price = 33350; };
     class CUP_O_M113_TKA                                    { quality = 3; price = 33350; };
-	class CUP_B_HMMWV_M2_GPK_NATO_T                         { quality = 3; price = 45400; };
+	class CUP_B_HMMWV_M2_GPK_NATO_T                         { quality = 3; price = 75000; sellPrice = 22000; };
     class CUP_B_UAZ_SPG9_ACR                                { quality = 3; price = 40400; };
     class CUP_I_UAZ_SPG9_UN                                 { quality = 3; price = 40400; };
     class CUP_O_UAZ_SPG9_TKA                                { quality = 3; price = 40400; };
